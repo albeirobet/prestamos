@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>pinos</groupId>
+		<artifactId>prestamos</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>prestamos-ear</artifactId>
+	<packaging>ear</packaging>
+	<name>prestamos-ear</name>
+	<description>Modulo en el cual se van a enpaquetar toda la aplicacion</description>
+	<dependencies>
+		<dependency>
+			<groupId>pinos</groupId>
+			<artifactId>prestamos-war</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>pinos</groupId>
+			<artifactId>prestamos-ejb</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>pinos</groupId>
+			<artifactId>prestamos-dm</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>jar</type>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<modules>
+						<webModule>
+							<groupId>pinos</groupId>
+							<artifactId>prestamos-war</artifactId>
+							<bundleFileName>prestamos.war</bundleFileName>
+							<contextRoot>prestamos</contextRoot>
+						</webModule>
+						<ejbModule>
+							<groupId>pinos</groupId>
+							<artifactId>prestamos-ejb</artifactId>
+							<bundleFileName>prestamos-ejb.jar</bundleFileName>
+						</ejbModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

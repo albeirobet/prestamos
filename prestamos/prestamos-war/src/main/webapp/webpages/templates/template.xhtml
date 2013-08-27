@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Prestamos <ui:insert name="titulo"></ui:insert></title>
+	<meta http-equiv="Content-Language" content="es" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="Eyder Albeiro Ascuntar Rosales" />
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+	<h:outputStylesheet library="css" name="custom.css" />
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <h:outputScript library="js" name="html5shiv.js"></h:outputScript>
+	  <h:outputScript library="js" name="respond.min.js"></h:outputScript>	
+    <![endif]-->
+</h:head>
+<h:body>
+	<!-- Static navbar -->
+	<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Prestamos Los Pinos</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+				   <ui:insert name="menu_principal"></ui:insert>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<div class="container">
+	 <ui:insert name="contenedor_principal"></ui:insert>
+	</div>
+	<div id="footer">
+		<div class="container">
+		    <p style="margin-top: 2%">Prestamos Los Pinos © 2013</p>
+			<p class="text-muted credit">
+				Desarrollado por: <a href="http://wwww.partiturasmusicales.site90.com" target="_blank">Eyder Albeiro Ascuntar Rosales</a>
+		</p>
+		</div>
+	</div>
+	<h:outputScript library="js" name="jquery.js"></h:outputScript>
+	<h:outputScript library="js" name="bootstrap.js"></h:outputScript>
+</h:body>
+</html>
