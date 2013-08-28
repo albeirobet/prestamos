@@ -5,29 +5,25 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
-<h:head>
-</h:head>
-<h:body>
-	<ui:composition>
+<ui:composition>
 
-		<p:panel header="Administraci&oacute;n Personas del Sistema">
-			<h:outputText
-				value="Este sistema es un conjunto de herramientas que permiten mantener la informaci&oacute;n de 
+	<p:panel header="Administraci&oacute;n Personas del Sistema">
+		<h:outputText
+			value="Este sistema es un conjunto de herramientas que permiten mantener la informaci&oacute;n de 
 							 los Clientes, Socios, Empleados, Inversiones y Gastos de una manera organizada y asequible en cualquier momento. Ademas brinda informes, estadisticas y datos
 							 importantes para la Empresa." />
-			<br />
-			<br />
-			<p:tabView effect="slide" effectDuration="normal">
-				<p:tab title="Nuevo Reg&iacute;stro">
-					<ui:include
-						src="/webpages/bloks/GestionPersonas/AgregarPersona.xhtml">
-				    </ui:include>
-				</p:tab>
-				<p:tab title="Administraci&oacute;n">
+		<br />
+		<br />
+		<p:tabView effect="slide" effectDuration="normal">
+			<p:tab title="Nuevo Reg&iacute;stro">
+				<ui:include
+					src="/webpages/bloks/GestionPersonas/AgregarPersona.xhtml">
+				</ui:include>
+			</p:tab>
+			<p:tab title="Administraci&oacute;n">
 
-				</p:tab>
-			</p:tabView>
-		</p:panel>
-	</ui:composition>
-</h:body>
+			</p:tab>
+		</p:tabView>
+	</p:panel>
+</ui:composition>
 </html>

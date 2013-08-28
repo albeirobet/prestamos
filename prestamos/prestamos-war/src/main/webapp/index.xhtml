@@ -3,33 +3,38 @@
 
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns="http://www.w3.org/1999/xhtml"
-	template="webpages/templates/template.xhtml"
+	template="/webpages/templates/template.xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
-
 	<ui:define name="titulo">
        Los Pinos
     </ui:define>
 	<ui:define name="menu_principal">
-		<li class="active"><a href="#">Inicio</a></li>
-		<li class="dropdown"><a href="webpages/admin.xhtml"
+		<li><a href="#">Inicio</a></li>
+		<li class="dropdown active"><a href="#"
 			class="dropdown-toggle" data-toggle="dropdown">Administraci&oacute;n
 				<b class="caret"></b>
 		</a>
 			<ul class="dropdown-menu">
-				<li><a href="webpages/admin.xhtml"><h:outputLabel styleClass="cursorSelect" for="name" value="Personas" /></a></li>
-				<li><a><h:outputLabel styleClass="cursorSelect" for="name" value="Socios" /></a></li>
-				<li><a><h:outputLabel styleClass="cursorSelect" for="name" value="Clientes" /></a></li>
-				<li><a><h:outputLabel styleClass="cursorSelect" for="name" value="Inversiones"/></a></li>
-				<li><a><h:outputLabel styleClass="cursorSelect" for="name" value="Prestamos" /></a></li>
-				<li><a><h:outputLabel styleClass="cursorSelect" for="name" value="Gastos" /></a></li>
+				<li><a><h:outputLabel styleClass="cursorSelect"
+							value="Personas" /></a></li>
+				<li><a><h:outputLabel styleClass="cursorSelect"
+							value="Socios" /></a></li>
+				<li><a><h:outputLabel styleClass="cursorSelect"
+							value="Clientes" /></a></li>
+				<li><a><h:outputLabel styleClass="cursorSelect"
+							value="Inversiones" /></a></li>
+				<li><a><h:outputLabel styleClass="cursorSelect"
+							value="Prestamos" /></a></li>
+				<li><a><h:outputLabel styleClass="cursorSelect"
+							value="Gastos" /></a></li>
 			</ul></li>
 		<li><a href="#clientes">Clientes</a></li>
 		<li><a href="#socios">Socios</a></li>
 	</ui:define>
-
 	<ui:define name="contenedor_principal">
-         
+		
 	</ui:define>
+
 </ui:composition>
