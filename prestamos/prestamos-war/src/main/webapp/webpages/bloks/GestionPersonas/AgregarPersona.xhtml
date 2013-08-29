@@ -6,37 +6,38 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 <ui:composition>
+
 	<p:accordionPanel>
 		<p:tab title="Datos Personales">
+
 			<h:panelGrid columns="3">
 				<h:outputText value="C&eacute;dula:" />
-				<p:inputText id="ced_person" required="true" label="Cedula" />
+				<p:inputText id="ced_person" required="true" label="Cedula"
+					value="#{accionPersona.cedula}" />
 				<h:outputText value="*" />
 				<h:outputText value="Primer Nombre:" />
 				<p:inputText id="prim_nom_person" required="true"
-					label="Primer Nombre" />
+					label="Primer Nombre" value="#{accionPersona.primerNombre}" />
 				<h:outputText value="*" />
 				<h:outputText value="Segundo Nombre:" />
 				<p:inputText id="seg_nom_person" required="true"
-					label="Segundo Nombre" />
+					label="Segundo Nombre" value="#{accionPersona.segundoNombre}" />
 				<h:outputText value="" />
 				<h:outputText value="Primer Apellido:" />
 				<p:inputText id="prim_ape_person" required="true"
-					label="Primer Apellido" />
+					label="Primer Apellido" value="#{accionPersona.primerApellido}" />
 				<h:outputText value="*" />
 				<h:outputText value="Segundo Apellido:" />
 				<p:inputText id="seg_ape_person" required="true"
-					label="Segundo Apellido" />
+					label="Segundo Apellido" value="#{accionPersona.segundoApellido}" />
 				<h:outputText value="" />
 				<h:outputText value="Fecha de Nacimiento:" />
-				<p:calendar id="fecha_nac_persona" />
-				<h:outputText value="*" />
-				<h:outputText value="Fecha de Nacimiento:" />
-				<p:calendar locale="es" showButtonPanel="true" navigator="true" id="ptCal"/>  
+				<p:calendar id="fecha_nac_persona"
+					value="#{accionPersona.fechaNacimiento}" />
 				<h:outputText value="*" />
 			</h:panelGrid>
 		</p:tab>
-		<p:tab title="Datos Domicilio">
+		<p:tab title="Datos Domicilio y Cont&aacute;cto">
 			<h:panelGrid columns="3">
 				<h:outputText value="Departamento:" />
 				<p:inputText id="depart_persona" required="true"
@@ -45,27 +46,21 @@
 				<h:outputText value="Ciudad:" />
 				<p:inputText id="ciud_persona" required="true" label="Ciudad" />
 				<h:outputText value="*" />
-				<h:outputText value="Barrio:" />
-				<p:inputText id="barrio_persona" required="true" label="Barrio" />
-				<h:outputText value="" />
 				<h:outputText value="Direcci&oacute;n:" />
 				<p:inputText id="dir_persona" required="true"
-					label="Direcci&oacute;n" />
+					label="Direcci&oacute;n" value="#{accionPersona.direccion}" />
 				<h:outputText value="*" />
-			</h:panelGrid>
-		</p:tab>
-		<p:tab title="Datos Cont&aacute;cto">
-			<h:panelGrid columns="3">
 				<h:outputText value="Tel&eacute;fono Fijo:" />
 				<p:inputText id="tel_persona" required="true"
-					label="Tel&eacute;fono" />
+					label="Tel&eacute;fono" value="#{accionPersona.telefonoFijo}" />
 				<h:outputText value="" />
 				<h:outputText value="Celular:" />
-				<p:inputText id="cel_persona" required="true" label="Celular" />
+				<p:inputText id="cel_persona" required="true" label="Celular"
+					value="#{accionPersona.telefonoMovil}" />
 				<h:outputText value="*" />
 				<h:outputText value="Correo Electronico:" />
 				<p:inputText id="correo_persona" required="true"
-					label="Correo Electronico" />
+					label="Correo Electronico"  />
 				<h:outputText value="" />
 			</h:panelGrid>
 		</p:tab>
@@ -74,5 +69,6 @@
 	<p:commandButton value="Guardar" id="btn_agregar_persona"
 		styleClass="ui-priority-primary" />
 	<p:spacer width="3" />
+
 </ui:composition>
 </html>
